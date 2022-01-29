@@ -133,10 +133,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="clear_.c">
+    <Compile Include="General_func.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="clear_.h">
+    <Compile Include="General_func.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LED_func.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LED_func.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">

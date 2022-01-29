@@ -37,7 +37,8 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../clear_.c \
+../General_func.c \
+../LED_func.c \
 ../main.c
 
 
@@ -48,19 +49,23 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-clear_.o \
+General_func.o \
+LED_func.o \
 main.o
 
 OBJS_AS_ARGS +=  \
-clear_.o \
+General_func.o \
+LED_func.o \
 main.o
 
 C_DEPS +=  \
-clear_.d \
+General_func.d \
+LED_func.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
-clear_.d \
+General_func.d \
+LED_func.d \
 main.d
 
 OUTPUT_FILE_PATH +=LCD_2022_01_25.elf
@@ -77,7 +82,14 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-./clear_.o: .././clear_.c
+./General_func.o: .././General_func.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega324pa -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega324pa" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./LED_func.o: .././LED_func.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega324pa -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega324pa" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

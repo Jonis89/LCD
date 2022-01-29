@@ -1,13 +1,13 @@
 //include gard
 
 
-#ifndef CLEAR_H
-#define CLEAR_H
+#ifndef GENERAL_FUNC
+#define GENERAL_FUNC
 #include <stdint.h>
 #define _NOP() do { asm volatile ("nop"); } while (0)
 	
 /**
- * @brief clear array
+ * @brief clear_array
  *
  * @param[out] p1 array to clear 
  * @param[in] len size of array

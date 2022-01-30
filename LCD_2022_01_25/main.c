@@ -27,7 +27,9 @@ uint8_t main(void)
 	//clear_array(dummy,5);
 	const i=sizeof(dummy);
 	uint8_t array1[LENGTH];
-	uint8_t blue =3;
+	uint8_t blue = 7;
+	uint8_t green = 1;
+	uint8_t yellow= 3;
 	int cnt=0;
 	
 	
@@ -36,6 +38,8 @@ uint8_t main(void)
 			
 			sink_led(blue);
 			cnt=cnt++;
+			source_led(green);
+			source_led(yellow);
 	
 		
 		}

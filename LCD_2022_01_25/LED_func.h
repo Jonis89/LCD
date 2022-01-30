@@ -9,6 +9,7 @@
 #ifndef LED_FUNC_H_
 #define LED_FUNC_H_
 #include <stdint.h>
+#include <avr/io.h>
 #define _NOP() do { asm volatile ("nop"); } while (0)
 
 /**
@@ -22,7 +23,7 @@
 
 void sink_led(uint8_t port_nr);
 
-
+void source_led(uint8_t LED_S);
 
 /*union BitField {
 	struct{

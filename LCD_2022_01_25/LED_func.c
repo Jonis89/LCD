@@ -7,14 +7,21 @@
 
 #include "LED_func.h"
 
-
-
+void set_all_pin_HI_Z(){
+	DDRA=0x00;
+	PORTA=0x00;
+	_NOP();
+	_NOP();
+	return;
+}
+	
 
 void sink_led(uint8_t port_nr){
 	
 	uint8_t dummy = 1;
 	uint8_t PINA_tmp=PINA;
 	dummy <<= (port_nr-1);
+	
 	PORTA|=dummy;
 	_NOP();
 	_NOP();

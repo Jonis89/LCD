@@ -27,9 +27,12 @@ uint8_t main(void)
 	//clear_array(dummy,5);
 	const i=sizeof(dummy);
 	uint8_t array1[LENGTH];
-	uint8_t blue = 7;
-	uint8_t green = 1;
-	uint8_t yellow= 3;
+	uint8_t blue = 1;
+	uint8_t green = 6;
+	
+	
+	
+	uint8_t yellow= 2;
 	int cnt=0;
 	
 	
@@ -40,7 +43,9 @@ uint8_t main(void)
 			cnt=cnt++;
 			source_led(green);
 			source_led(yellow);
-	
+			sink_led(blue);
+			set_all_pin_HI_Z();
+			
 		
 		}
 	 return 0;

@@ -23,7 +23,21 @@
 
 void sink_led(uint8_t port_nr);
 
+/**
+ *@brief Source current to LED, only applicate to PORTA.
+ *DDxn data direction =1. 
+ *PORTA source-mode =1.
+ *@param[in] selects which port the LED is connected to.
+ */
+
 void source_led(uint8_t LED_S);
+
+/**
+ *@brief set all pins at PORTA to high impedance mode HI-Z. 
+ */
+
+
+void set_all_pin_HI_Z();
 
 /*union BitField {
 	struct{

@@ -112,9 +112,7 @@ void sink_led(uint8_t port_nr){
   ba:	92 b1       	in	r25, 0x02	; 2
   bc:	89 2b       	or	r24, r25
   be:	82 b9       	out	0x02, r24	; 2
-	
 	dummy = 0;
-	
 	DDRA &= dummy;
   c0:	81 b1       	in	r24, 0x01	; 1
   c2:	11 b8       	out	0x01, r1	; 1

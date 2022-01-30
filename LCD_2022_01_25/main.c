@@ -34,7 +34,7 @@ uint8_t main(void)
 	
 		while(1){
 			
-			sink_l(blue);
+			sink_led(blue);
 			cnt=cnt++;
 	
 		
